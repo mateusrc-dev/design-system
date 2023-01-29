@@ -7,7 +7,7 @@ export default {
     // argumentos
     children: 'Enviar',
   },
-  title: 'Button',
+  title: 'Form/Button',
   component: Button,
 } as Meta<ButtonProps>
 

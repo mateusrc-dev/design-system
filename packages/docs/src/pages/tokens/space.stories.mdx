@@ -1,0 +1,12 @@
+import { Meta } from "@storybook/addon-docs"; // definindo configuração global - tudo que colocarmos dentro de Meta vai fazer parte da configuração default - definir documentação
+import { TokensGrid } from "../../components/TokensGrid";
+import { space } from "@ignite-ui/tokens"
+// toda vez que colocamos uma barra é criado um submenu no storybook
+
+<Meta title="Tokens/Spaces" />
+
+# Spaces
+
+Essas são os espaços utilizadas no Ignite UI.
+
+<TokensGrid tokens={space} hasRemValue={true} />
