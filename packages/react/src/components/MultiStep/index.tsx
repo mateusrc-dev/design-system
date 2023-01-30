@@ -21,3 +21,5 @@ export function MultiStep({ size, currentStep = 1 }: MultiStepProps) {
     </MultiStepContainer>
   )
 }
+
+MultiStep.displayName = 'MultiStep' // vamos configurar como queremos que o nome do componente apareça dentro do story-book

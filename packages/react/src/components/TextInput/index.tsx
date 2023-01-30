@@ -14,3 +14,5 @@ export function TextInput({ prefix, ...props }: TextInputProps) {
     </TextInputContainer>
   )
 }
+
+TextInput.displayName = 'TextInput' // vamos configurar como queremos que o nome do componente apareça dentro do story-book

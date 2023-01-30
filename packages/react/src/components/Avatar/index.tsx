@@ -16,3 +16,5 @@ export function Avatar(props: AvatarProps) {
     </AvatarContainer>
   )
 }
+
+Avatar.displayName = 'Avatar' // vamos configurar como queremos que o nome do componente apareça dentro do story-book

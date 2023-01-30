@@ -15,3 +15,5 @@ export function Checkbox(props: CheckboxProps) {
     </CheckboxContainer>
   )
 }
+
+Checkbox.displayName = 'Checkbox' // vamos configurar como queremos que o nome do componente apareça dentro do story-book

@@ -29,3 +29,5 @@ export const Heading = styled('h2', {
 export interface HeadingProps extends ComponentProps<typeof Heading> {
   as?: ElementType
 }
+
+Heading.displayName = 'Heading' // vamos configurar como queremos que o nome do componente apareça dentro do story-book

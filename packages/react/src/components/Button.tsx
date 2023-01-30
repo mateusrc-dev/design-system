@@ -88,3 +88,5 @@ export const Button = styled('button', {
 export interface ButtonProps extends ComponentProps<typeof Button> {
   as?: ElementType
 }
+
+Button.displayName = 'Button' // vamos configurar como queremos que o nome do componente apareça dentro do story-book
