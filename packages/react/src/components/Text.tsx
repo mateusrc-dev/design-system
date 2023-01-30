@@ -2,8 +2,8 @@ import { ComponentProps, ElementType } from 'react' // o ComponentProps faz a le
 import { styled } from '../styles'
 
 export const Text = styled('p', {
-  fontFamily: '&default',
-  lineHeight: '&base',
+  fontFamily: '$default',
+  lineHeight: '$base',
   margin: 0,
   color: '$gray100',
 
