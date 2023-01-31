@@ -7,7 +7,33 @@ export default {
   title: 'Form/Button',
   component: Button,
   args: {
+    // aqui vai ser o valor padrão das nossas propriedades
     children: 'Send',
+    variant: 'primary',
+    size: 'md',
+    disabled: false,
+  },
+  argTypes: {
+    variant: {
+      options: ['primary', 'secondary', 'tertiary'], // vamos colocar as opções que temos na propriedade variant
+      control: {
+        type: 'inline-radio', // especificando o tipo de controle
+      },
+    },
+    size: {
+      options: ['sm', 'md'], // vamos colocar as opções que temos na propriedade size
+      control: {
+        type: 'inline-radio', // especificando o tipo de controle
+      },
+    },
+    disabled: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    onClick: {
+      action: 'click',
+    },
   },
 } as Meta<ButtonProps>
 

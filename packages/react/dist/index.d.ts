@@ -838,7 +838,7 @@ declare namespace Avatar {
 }
 
 declare const Button: _stitches_react_types_styled_component.StyledComponent<"button", {
-    variant?: "&:disabled" | "primary" | "secondary" | "tertiary" | "&:not(:disabled):hover" | undefined;
+    variant?: "primary" | "secondary" | "tertiary" | undefined;
     size?: "sm" | "md" | undefined;
 }, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {

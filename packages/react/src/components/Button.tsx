@@ -59,16 +59,17 @@ export const Button = styled('button', {
       },
       tertiary: {
         color: '$gray100',
-      },
 
-      '&:not(:disabled):hover': {
-        color: '$white',
-      },
+        '&:not(:disabled):hover': {
+          color: '$white',
+        },
 
-      '&:disabled': {
-        color: '$gray600',
+        '&:disabled': {
+          color: '$gray600',
+        },
       },
     },
+
     size: {
       // variantes de tamanhos
       sm: {

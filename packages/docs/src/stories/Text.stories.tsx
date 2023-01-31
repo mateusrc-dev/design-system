@@ -6,8 +6,31 @@ export default {
   title: 'Typography/Text',
   component: Text,
   args: {
+    size: 'md',
     children:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, autem. Facilis quis quam corporis maxime. Voluptate aliquid excepturi modi corrupti, tempora deleniti nobis suscipit? Molestias corrupti doloremque velit aspernatur ullam.',
+  },
+  argTypes: {
+    size: {
+      options: [
+        'xxs',
+        'xs',
+        'sm',
+        'md',
+        'lg',
+        'xl',
+        '2xl',
+        '4xl',
+        '5xl',
+        '6xl',
+        '7xl',
+        '8xl',
+        '9xl',
+      ], // vamos colocar as opções que temos na propriedade size
+      control: {
+        type: 'inline-radio', // especificando o tipo de controle
+      },
+    },
   },
 } as Meta<TextProps>
 

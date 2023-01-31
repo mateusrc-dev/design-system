@@ -9,6 +9,13 @@ export default {
     src: 'https://github.com/mateusrc-dev.png', // podemos passar esses argumentos porque colocamos as props
     alt: 'Mateus Raimundo',
   },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
