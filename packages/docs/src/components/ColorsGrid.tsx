@@ -1,6 +1,6 @@
 // vamos criar aqui uma estrutura visual para mostrar as cores do nosso projeto
 
-import { colors } from '@ignite-ui/tokens'
+import { colors } from '@mateus-ignite-ui/tokens'
 import { getContrast } from 'polished' // nos permite trabalhar com contrastes
 
 export function ColorsGrid() {
