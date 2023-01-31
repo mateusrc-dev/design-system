@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react' // são tipagens do typescript
-import { Box, MultiStep, MultiStepProps } from '@ignite-ui/react'
+import { Box, MultiStep, MultiStepProps } from '@mateus-ignite-ui/react'
 
 export default {
   // definindo configuração global do componente - tudo que temos aqui dentro do objeto principal vai aparecer em todas as variações desse componente
