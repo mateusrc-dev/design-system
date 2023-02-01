@@ -19,5 +19,4 @@ export const colors = {
   ignite900: '#00291D',
 
   test: '#FFF',
-  testTwo: '#000',
 }
