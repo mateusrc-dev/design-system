@@ -12,7 +12,7 @@ jobs:
     name: Release
     runs-on: windows-latest
     steps:
-      - name: Checkout
+       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -22,7 +22,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
 
-      - run: npm ci      
+      - run: npm ci
 
       - name: Publish to NPM
         id: changesets
@@ -34,3 +34,8 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           TURBO_TOKEN: FCPRIdo8w7kB3gwIoJ6SA5yg
           TURBO_TEAM: mateusrc-dev
+
+      - name: Send a Slack notification if a publish happens
+        if: steps.changesets.outputs.published == 'true'
+        # You can do something when a publish happens.
+        run: my-slack-bot send-notification --message "A new version of ${GITHUB_REPOSITORY} was published!"
