@@ -1,5 +1,11 @@
 # @mateus-ignite-ui/tokens
 
+## 6.10.0
+
+### Minor Changes
+
+- new color
+
 ## 6.9.0
 
 ### Minor Changes
