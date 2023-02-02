@@ -1,16 +1,16 @@
 import type { StoryObj, Meta } from '@storybook/react' // são tipagens do typescript
-import { Tooltip, TooltipProps } from '@mateus-ignite-ui/react'
+import { Toast, ToastProps } from '@mateus-ignite-ui/react'
 
 export default {
   // definindo configuração global do componente - tudo que temos aqui dentro do objeto principal vai aparecer em todas as variações desse componente
-  title: 'Form/Tooltip',
-  component: Tooltip,
+  title: 'Form/Toast',
+  component: Toast,
   args: {
-    date: '21',
-    content: '21 de Outubro - Indisponível',
+    title: 'Agendamento realizado', // podemos passar esses argumentos porque colocamos as props
+    date: 'Quarta-feira, 23 de Outubro às 16h',
   },
   argTypes: {
-    content: {
+    title: {
       control: {
         type: 'text',
       },
@@ -21,6 +21,6 @@ export default {
       },
     },
   },
-} as Meta<TooltipProps>
+} as Meta<ToastProps>
 
-export const Primary: StoryObj<TooltipProps> = {}
+export const Primary: StoryObj<ToastProps> = {}

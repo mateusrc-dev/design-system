@@ -1,5 +1,11 @@
 # @mateus-ignite-ui/ts-config
 
+## 4.1.0
+
+### Minor Changes
+
+- create new components: buttonSvg and Toast
+
 ## 4.0.0
 
 ### Major Changes

@@ -503,8 +503,9 @@ var Date = styled("button", {
   padding: "16px 26px",
   width: 66.86,
   height: 58,
-  background: "#323238",
-  borderRadius: 6,
+  background: "$gray600",
+  borderRadius: "$sm",
+  border: 0,
   "&:hover": {
     filter: "brightness(0.8)",
     span: {
@@ -515,15 +516,15 @@ var Date = styled("button", {
 var TooltipContainer = styled("span", {
   position: "absolute",
   bottom: "80%",
-  left: "-120%",
-  marginBottom: "5px",
+  left: "-115%",
+  marginBottom: "$1",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   width: 219,
   height: 44,
-  background: "#121214",
-  borderRadius: 5,
+  background: "$gray900",
+  borderRadius: "$sm",
   visibility: "hidden",
   "&:after": {
     content: "",
@@ -531,7 +532,7 @@ var TooltipContainer = styled("span", {
     top: "100%",
     borderWidth: 5,
     borderStyle: "solid",
-    borderColor: "#000 transparent transparent transparent"
+    borderColor: "$black transparent transparent transparent"
   }
 });
 
@@ -544,15 +545,84 @@ function Tooltip(props) {
   ] });
 }
 Tooltip.displayName = "Tooltip";
+
+// src/components/Toast/index.tsx
+import { X } from "phosphor-react";
+
+// src/components/ButtonSvg/styles.ts
+var ButtonSvgContainer = styled("button", {
+  background: "none",
+  border: 0,
+  cursor: "pointer",
+  width: 23,
+  svg: {
+    fontSize: "$xl",
+    color: "$gray200",
+    "&:hover": {
+      filter: "brightness(0.7)"
+    }
+  }
+});
+
+// src/components/ButtonSvg/index.tsx
+import { jsx as jsx6 } from "react/jsx-runtime";
+function ButtonSvg(_a) {
+  var _b = _a, { children } = _b, props = __objRest(_b, ["children"]);
+  return /* @__PURE__ */ jsx6(ButtonSvgContainer, __spreadProps(__spreadValues({}, props), { children }));
+}
+ButtonSvg.displayName = "ButtonSvg";
+
+// src/components/Toast/styles.ts
+var ToastContainer = styled("div", {
+  padding: "0px 20px",
+  width: 360,
+  minHeight: 82,
+  background: "$gray800",
+  border: "1px solid $gray600",
+  borderRadius: "$sm",
+  span: {
+    display: "flex",
+    alignItems: "baseline",
+    justifyContent: "space-between",
+    height: 40,
+    h2: {
+      fontFamily: "$default",
+      fontWeight: "$bold",
+      fontSize: "$xl",
+      color: "$white"
+    }
+  },
+  p: {
+    fontFamily: "$default",
+    fontWeight: "$regular",
+    fontSize: "$sm",
+    color: "$gray200"
+  }
+});
+
+// src/components/Toast/index.tsx
+import { jsx as jsx7, jsxs as jsxs5 } from "react/jsx-runtime";
+function Toast(props) {
+  return /* @__PURE__ */ jsxs5(ToastContainer, { children: [
+    /* @__PURE__ */ jsxs5("span", { children: [
+      /* @__PURE__ */ jsx7("h2", { children: props.title }),
+      /* @__PURE__ */ jsx7(ButtonSvg, { children: /* @__PURE__ */ jsx7(X, {}) })
+    ] }),
+    /* @__PURE__ */ jsx7("p", { children: props.date })
+  ] });
+}
+Toast.displayName = "Toast";
 export {
   Avatar2 as Avatar,
   Box,
   Button,
+  ButtonSvg,
   Checkbox2 as Checkbox,
   Heading,
   MultiStep,
   Text,
   TextArea,
   TextInput,
+  Toast,
   Tooltip
 };

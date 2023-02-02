@@ -1,5 +1,11 @@
 # @mateus-ignite-ui/react
 
+## 4.2.0
+
+### Minor Changes
+
+- create new components: buttonSvg and Toast
+
 ## 4.1.0
 
 ### Minor Changes

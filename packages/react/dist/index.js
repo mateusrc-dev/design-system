@@ -58,12 +58,14 @@ __export(src_exports, {
   Avatar: () => Avatar2,
   Box: () => Box,
   Button: () => Button,
+  ButtonSvg: () => ButtonSvg,
   Checkbox: () => Checkbox2,
   Heading: () => Heading,
   MultiStep: () => MultiStep,
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput,
+  Toast: () => Toast,
   Tooltip: () => Tooltip
 });
 module.exports = __toCommonJS(src_exports);
@@ -541,8 +543,9 @@ var Date = styled("button", {
   padding: "16px 26px",
   width: 66.86,
   height: 58,
-  background: "#323238",
-  borderRadius: 6,
+  background: "$gray600",
+  borderRadius: "$sm",
+  border: 0,
   "&:hover": {
     filter: "brightness(0.8)",
     span: {
@@ -553,15 +556,15 @@ var Date = styled("button", {
 var TooltipContainer = styled("span", {
   position: "absolute",
   bottom: "80%",
-  left: "-120%",
-  marginBottom: "5px",
+  left: "-115%",
+  marginBottom: "$1",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   width: 219,
   height: 44,
-  background: "#121214",
-  borderRadius: 5,
+  background: "$gray900",
+  borderRadius: "$sm",
   visibility: "hidden",
   "&:after": {
     content: "",
@@ -569,7 +572,7 @@ var TooltipContainer = styled("span", {
     top: "100%",
     borderWidth: 5,
     borderStyle: "solid",
-    borderColor: "#000 transparent transparent transparent"
+    borderColor: "$black transparent transparent transparent"
   }
 });
 
@@ -582,16 +585,85 @@ function Tooltip(props) {
   ] });
 }
 Tooltip.displayName = "Tooltip";
+
+// src/components/Toast/index.tsx
+var import_phosphor_react3 = require("phosphor-react");
+
+// src/components/ButtonSvg/styles.ts
+var ButtonSvgContainer = styled("button", {
+  background: "none",
+  border: 0,
+  cursor: "pointer",
+  width: 23,
+  svg: {
+    fontSize: "$xl",
+    color: "$gray200",
+    "&:hover": {
+      filter: "brightness(0.7)"
+    }
+  }
+});
+
+// src/components/ButtonSvg/index.tsx
+var import_jsx_runtime6 = require("react/jsx-runtime");
+function ButtonSvg(_a) {
+  var _b = _a, { children } = _b, props = __objRest(_b, ["children"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ButtonSvgContainer, __spreadProps(__spreadValues({}, props), { children }));
+}
+ButtonSvg.displayName = "ButtonSvg";
+
+// src/components/Toast/styles.ts
+var ToastContainer = styled("div", {
+  padding: "0px 20px",
+  width: 360,
+  minHeight: 82,
+  background: "$gray800",
+  border: "1px solid $gray600",
+  borderRadius: "$sm",
+  span: {
+    display: "flex",
+    alignItems: "baseline",
+    justifyContent: "space-between",
+    height: 40,
+    h2: {
+      fontFamily: "$default",
+      fontWeight: "$bold",
+      fontSize: "$xl",
+      color: "$white"
+    }
+  },
+  p: {
+    fontFamily: "$default",
+    fontWeight: "$regular",
+    fontSize: "$sm",
+    color: "$gray200"
+  }
+});
+
+// src/components/Toast/index.tsx
+var import_jsx_runtime7 = require("react/jsx-runtime");
+function Toast(props) {
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(ToastContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { children: props.title }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(ButtonSvg, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_phosphor_react3.X, {}) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { children: props.date })
+  ] });
+}
+Toast.displayName = "Toast";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
   Box,
   Button,
+  ButtonSvg,
   Checkbox,
   Heading,
   MultiStep,
   Text,
   TextArea,
   TextInput,
+  Toast,
   Tooltip
 });

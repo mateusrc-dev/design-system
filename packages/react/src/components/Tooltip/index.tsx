@@ -4,7 +4,7 @@ import { Text } from '../Text'
 
 export interface TooltipProps extends ComponentProps<typeof TooltipContainer> {
   content: string
-  date: number
+  date: string
 } // vamos colocar as propriedades em AvatarImage de uma tag img - podemos fazer isso colocando a tipagem em props
 
 export function Tooltip(props: TooltipProps) {

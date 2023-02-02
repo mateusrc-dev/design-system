@@ -1,5 +1,11 @@
 # @mateus-ignite-ui/tokens
 
+## 6.16.0
+
+### Minor Changes
+
+- create new components: buttonSvg and Toast
+
 ## 6.15.0
 
 ### Minor Changes
