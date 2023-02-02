@@ -63,7 +63,8 @@ __export(src_exports, {
   MultiStep: () => MultiStep,
   Text: () => Text,
   TextArea: () => TextArea,
-  TextInput: () => TextInput
+  TextInput: () => TextInput,
+  Tooltip: () => Tooltip
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -82,7 +83,9 @@ var colors = {
   ignite300: "#00B37E",
   ignite500: "#00875F",
   ignite700: "#015F43",
-  ignite900: "#00291D"
+  ignite900: "#00291D",
+  test: "#FFF",
+  testTwo: "#000"
 };
 var fontSizes = {
   xxs: "0.625rem",
@@ -526,6 +529,59 @@ function MultiStep({ size, currentStep = 1 }) {
   ] });
 }
 MultiStep.displayName = "MultiStep";
+
+// src/components/Tooltip/styles.ts
+var Date = styled("button", {
+  position: "relative",
+  marginTop: 100,
+  marginLeft: 100,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "16px 26px",
+  width: 66.86,
+  height: 58,
+  background: "#323238",
+  borderRadius: 6,
+  "&:hover": {
+    filter: "brightness(0.8)",
+    span: {
+      visibility: "visible"
+    }
+  }
+});
+var TooltipContainer = styled("span", {
+  position: "absolute",
+  bottom: "80%",
+  left: "-120%",
+  marginBottom: "5px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: 219,
+  height: 44,
+  background: "#121214",
+  borderRadius: 5,
+  visibility: "hidden",
+  "&:after": {
+    content: "",
+    position: "absolute",
+    top: "100%",
+    borderWidth: 5,
+    borderStyle: "solid",
+    borderColor: "#000 transparent transparent transparent"
+  }
+});
+
+// src/components/Tooltip/index.tsx
+var import_jsx_runtime5 = require("react/jsx-runtime");
+function Tooltip(props) {
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(Date, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Text, { children: props.date }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(TooltipContainer, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Text, { children: props.content }) })
+  ] });
+}
+Tooltip.displayName = "Tooltip";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -536,5 +592,6 @@ MultiStep.displayName = "MultiStep";
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  Tooltip
 });

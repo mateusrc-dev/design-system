@@ -13,6 +13,8 @@ declare const colors: {
     ignite500: string;
     ignite700: string;
     ignite900: string;
+    test: string;
+    testTwo: string;
 };
 
 declare const fontSizes: {
