@@ -1,5 +1,11 @@
 # @mateus-ignite-ui/tokens
 
+## 6.17.0
+
+### Minor Changes
+
+- update project
+
 ## 6.16.0
 
 ### Minor Changes

@@ -1,30 +1,31 @@
 import { styled } from '../../styles'
 
 export const ToastContainer = styled('div', {
-  padding: '0px 20px',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 4,
+  padding: '12px 20px',
   width: 360,
-  minHeight: 82,
   background: '$gray800',
   border: '1px solid $gray600',
   borderRadius: '$sm',
 
-  span: {
+  'span:nth-child(1)': {
     display: 'flex',
     alignItems: 'baseline',
     justifyContent: 'space-between',
-    height: 40,
-    h2: {
-      fontFamily: '$default',
-      fontWeight: '$bold',
-      fontSize: '$xl',
-      color: '$white',
-    },
+    lineHeight: '$base',
+    fontFamily: '$default',
+    fontWeight: '$bold',
+    fontSize: '$xl',
+    color: '$white',
   },
 
-  p: {
+  'span:nth-child(2)': {
     fontFamily: '$default',
     fontWeight: '$regular',
     fontSize: '$sm',
     color: '$gray200',
+    lineHeight: '$base',
   },
 })

@@ -6,7 +6,7 @@ export const ButtonSvgContainer = styled('button', {
   cursor: 'pointer',
   width: 23,
   svg: {
-    fontSize: '$xl',
+    fontSize: '$lg',
     color: '$gray200',
     '&:hover': {
       filter: 'brightness(0.7)',

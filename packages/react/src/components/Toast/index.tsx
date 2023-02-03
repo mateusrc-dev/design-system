@@ -13,12 +13,12 @@ export function Toast(props: ToastProps) {
   return (
     <ToastContainer>
       <span>
-        <h2>{props.title}</h2>
+        {props.title}
         <ButtonSvg>
           <X />
         </ButtonSvg>
       </span>
-      <p>{props.date}</p>
+      <span>{props.date}</span>
     </ToastContainer>
   )
 }

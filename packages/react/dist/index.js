@@ -596,7 +596,7 @@ var ButtonSvgContainer = styled("button", {
   cursor: "pointer",
   width: 23,
   svg: {
-    fontSize: "$xl",
+    fontSize: "$lg",
     color: "$gray200",
     "&:hover": {
       filter: "brightness(0.7)"
@@ -614,29 +614,30 @@ ButtonSvg.displayName = "ButtonSvg";
 
 // src/components/Toast/styles.ts
 var ToastContainer = styled("div", {
-  padding: "0px 20px",
+  display: "flex",
+  flexDirection: "column",
+  gap: 4,
+  padding: "12px 20px",
   width: 360,
-  minHeight: 82,
   background: "$gray800",
   border: "1px solid $gray600",
   borderRadius: "$sm",
-  span: {
+  "span:nth-child(1)": {
     display: "flex",
     alignItems: "baseline",
     justifyContent: "space-between",
-    height: 40,
-    h2: {
-      fontFamily: "$default",
-      fontWeight: "$bold",
-      fontSize: "$xl",
-      color: "$white"
-    }
+    lineHeight: "$base",
+    fontFamily: "$default",
+    fontWeight: "$bold",
+    fontSize: "$xl",
+    color: "$white"
   },
-  p: {
+  "span:nth-child(2)": {
     fontFamily: "$default",
     fontWeight: "$regular",
     fontSize: "$sm",
-    color: "$gray200"
+    color: "$gray200",
+    lineHeight: "$base"
   }
 });
 
@@ -645,10 +646,10 @@ var import_jsx_runtime7 = require("react/jsx-runtime");
 function Toast(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(ToastContainer, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { children: props.title }),
+      props.title,
       /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(ButtonSvg, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_phosphor_react3.X, {}) })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { children: props.date })
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { children: props.date })
   ] });
 }
 Toast.displayName = "Toast";

@@ -1,5 +1,11 @@
 # @mateus-ignite-ui/eslint-config
 
+## 4.2.0
+
+### Minor Changes
+
+- update project
+
 ## 4.1.0
 
 ### Minor Changes
