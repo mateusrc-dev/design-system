@@ -7,7 +7,18 @@ export const TextInputContainer = styled('div', {
   boxSizing: 'border-box',
   border: '2px solid $gray900', // vamos mudar a cor quando tiver com focus
   display: 'flex',
-  alignItems: 'baseline', // para alinhar na parte abaixo do texto
+  alignItems: 'center', // para alinhar na parte abaixo do texto
+
+  variants: {
+    size: {
+      sm: {
+        padding: '$2 $3',
+      },
+      md: {
+        padding: '$3 $4',
+      },
+    },
+  },
 
   '&:has(input:focus)': {
     // com has podemos selecionar estados - podemos selecionar um componente filho e fazer alterações no componente pai de acordo com o estado desse componente filho
@@ -17,6 +28,10 @@ export const TextInputContainer = styled('div', {
   '&:has(input:disabled)': {
     opacity: 0.5,
     cursor: 'not-allowed',
+  },
+
+  defaultVariants: {
+    size: 'md',
   },
 })
 
@@ -45,7 +60,7 @@ export const Input = styled('input', {
     cursor: 'not-allowed',
   },
 
-  '&:placeholder': {
+  '&::placeholder': {
     color: '$gray400',
   },
 })

@@ -1,5 +1,11 @@
 # @mateus-ignite-ui/react
 
+## 4.4.0
+
+### Minor Changes
+
+- Add option to pass reference to TextInput and adjust some styles
+
 ## 4.3.0
 
 ### Minor Changes
