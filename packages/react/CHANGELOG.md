@@ -1,5 +1,11 @@
 # @mateus-ignite-ui/react
 
+## 4.4.1
+
+### Patch Changes
+
+- update package.json
+
 ## 4.4.0
 
 ### Minor Changes
