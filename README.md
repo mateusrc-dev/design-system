@@ -1,12 +1,12 @@
-# design-system em construção...
-# Componentes do design-system 
+# criamos um design-system e colocamos ele no npm, para outras pessoas poder utilizar ele...
+# Componentes do design-system :
 
-- [ ] Text
-- [ ] Heading
-- [ ] Box
-- [ ] Button
-- [ ] TextInput
-- [ ] TextArea
-- [ ] Checkbox
-- [ ] Avatar
-- [ ] MultiStep
+- [x] Text
+- [x] Heading
+- [x] Box
+- [x] Button
+- [x] TextInput
+- [x] TextArea
+- [x] Checkbox
+- [x] Avatar
+- [x] MultiStep
