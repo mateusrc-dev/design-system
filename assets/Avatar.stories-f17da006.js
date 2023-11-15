@@ -1,0 +1,2 @@
+import{A as t}from"./index-eac7fbf9.js";import"./index-39d17dc8.js";import"./es.object.get-own-property-descriptor-037fa860.js";import"./index-f97499ea.js";import"./jsx-runtime-310bfdac.js";const c={title:"Data display/Avatar",component:t,args:{src:"https://github.com/mateusrc-dev.png",alt:"Mateus Raimundo"},argTypes:{src:{control:{type:"text"}}}},e={},m={args:{src:void 0}},p=["Primary","WithFallback"];export{e as Primary,m as WithFallback,p as __namedExportsOrder,c as default};
+//# sourceMappingURL=Avatar.stories-f17da006.js.map
